@@ -1,0 +1,1 @@
+ansible all -m fetch -a 'src=/var/log/cloud-init.log dest=/tmp/clientlogs' 

@@ -1,0 +1,11 @@
+---
+- name: lvm facts from aix
+  hosts: aix
+  tasks:
+  - name: Gather VG facts
+    ibm.power_aix.lvm_facts:
+      name: all
+      component: vg
+    register: output
+  - debug:
+      var: output

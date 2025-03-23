@@ -1,0 +1,10 @@
+ansible all -m setup –t /tmp/facts
+
+
+to view it
+
+jq . /tmp/facts
+
+or
+
+cat /tmp/facts/filename | python json.tool

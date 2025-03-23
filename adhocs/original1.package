@@ -1,0 +1,7 @@
+# install UNZIP on redhat, ubuntu and AIX using one package module
+
+
+ansible all -m package -a "name=unzip state=present"
+
+# delete
+ansible all -m package -a "name=unzip state=absent"

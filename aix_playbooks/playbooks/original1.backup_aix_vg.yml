@@ -1,0 +1,11 @@
+---
+- name: backup the rootvg with mksysb
+  hosts: aix
+  tasks:
+  - name: run backup
+    ibm.power_aix.backup:
+      action: create
+      type: mksysb
+      location: /tmp/backup_rootvg
+      exclude_files: false
+      extend_fs: yes

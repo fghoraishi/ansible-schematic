@@ -1,0 +1,12 @@
+ansible all -m user -a "name=foo password=1234 state=present"
+
+
+to test it:
+
+ansible all -m shell -a "cat /etc/passwd | grep foo"
+
+remove it:
+
+ansible all -m user -a "name=foo state=absent"
+
+
